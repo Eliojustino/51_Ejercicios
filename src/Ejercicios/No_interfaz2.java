@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class No_interfaz2 {
 	public static void main(String[] args) {
 		Scanner leer = new Scanner(System.in);
-		int a, b, c, d, e, f, g, h = 0, i = 0, j = 0, k, s;
+		int a, b, c, d, e, f, g, h;
 		
 		//Ejercicio 9
 		System.out.println("Calcula el área con sus tres lados.");
@@ -42,28 +42,15 @@ public class No_interfaz2 {
 		}
 		System.out.println(" ");
 		
-		//Ejercicio 12
+		//Ejercicio 13
 		System.out.println("Programa que calcule un número de la suerte. ");
 		System.out.print("Ingresa tu día de nacimiento: ");
 		e = leer.nextInt();
 		System.out.print("Ingresa tu mes de nacimiento: ");
 		f = leer.nextInt();
-		System.out.println("Ingresa tu año de cacimiento: ");
+		System.out.print("Ingresa tu año de cacimiento: ");
 		g = leer.nextInt();
-		char[] num1 = Integer.toString(e).toCharArray();
-		for (char nume1 : num1) {
-			h = (int) h + nume1;
-		}
-		char[] num2 = Integer.toString(f).toCharArray();
-		for (char nume2 : num2) {
-			i = (int) i + nume2;
-		}
-		char[] num3 = Integer.toString(g).toCharArray();
-		for (char nume3 : num3) {
-			j = (int) g + nume3;
-		}
-		System.out.println("Tú número de la suerte es: " + h+i+j);
-		System.out.println(" ");
-
+		h = (int) (Math.random()*9+1);
+		System.out.print("Tú número de la suerte es: " + h);
 	}
 }
